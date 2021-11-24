@@ -1,0 +1,18 @@
+<div *ngIf>
+  <h2>{{ veiculo.modelo | uppercase }} Detalhes</h2>
+  <div><span>Id: </span>{{ veiculo.id }}</div>
+  <div>
+    <label for="veiculo-modelo">Modelo do veiculo: </label>
+    <input
+      id="veiculo-modelo"
+      [(ngModel)]="veiculo.modelo"
+      placeholder="Modelo"
+    />
+    <label for="veiculo-tipo">Tipo do veiculo: </label>
+    <input id="veiculo-tipo" [(ngModel)]="veiculo.tipo" placeholder="Tipo" />
+    <label for="veiculo-marca">Marca do veiculo: </label>
+    <input id="veiculo-marca" [(ngModel)]="veiculo.marca" placeholder="Marca" />
+    <label for="veiculo-ano">Ano do veiculo: </label>
+    <input id="veiculo-ano" [(ngModel)]="veiculo.ano" placeholder="Ano" />
+  </div>
+</div>

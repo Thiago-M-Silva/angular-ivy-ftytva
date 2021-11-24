@@ -1,12 +1,11 @@
 <h1>Lista de veiculos</h1>
+
 <ul class="veiculo">
-  <li *ngFor="let veiculo of veiculo" (click)="onSelect(veiculo)">
-    <span class="badge">
-      {{ veiculo.id }} <br />
-      Tipo: {{ veiculo.tipo }} <br />
-      Modelo: {{ veiculo.modelo }} <br />
-      Marca: {{ veiculo.marca }} <br />
-      Ano: {{ veiculo.ano }}
-    </span>
+  <li
+    *ngFor="let veiculo of veiculo"
+    [class.selected]="veiculo == selectedVeiculo"
+    (click)="onSelect(veiculo)"
+  >
+    <span class="badge">{{ veiculo.id }}</span> {{ veiculo.modelo }}
   </li>
 </ul>
