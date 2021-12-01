@@ -10,6 +10,7 @@ export class VeiculoService {
 
   getVeiculos(): Observable<veiculo[]> {
     const veiculos = of(VEICULOS);
+    this.messagensService.add('VeiculoService: veiculos buscados');
     return veiculos;
   }
 }
